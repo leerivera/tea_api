@@ -18,9 +18,9 @@ app.get('/', (request, response) => {
 })
 
 app.get('/api', (request,response) => {
-    response.json()
+    response.json(tea)
 })
 
-app.listen(PORT, ()=> {
+app.listen(process.env.PORT || PORT, ()=> {
     console.log(`Server is doing it's thing thing on ${PORT}`)
 })
