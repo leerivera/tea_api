@@ -1,10 +1,11 @@
 const express = require('express')
 const app = express()
+const PORT = 8000;
 
 app.get('/', (request, response) => {
     response.sendFile(__dirname + '/index.html')
 })
 
-app.listen(8000, ()=> {
-    console.log(`Server is doing it's thing thing.`)
+app.listen(PORT, ()=> {
+    console.log(`Server is doing it's thing thing on ${PORT}`)
 })
